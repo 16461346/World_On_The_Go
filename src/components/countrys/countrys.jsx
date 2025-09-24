@@ -3,7 +3,7 @@ import Countre from './Countre';
 import './Countrys.css';
 
 const Countrys = ({ countresPromise }) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+    
     const countresData = use(countresPromise);
     const AllCountres = countresData.countries;
     console.log(AllCountres);
