@@ -1,19 +1,28 @@
 import React, { use } from 'react';
 import Countre from './Countre';
+import './Countrys.css';
 
-const countrys = ({countresPromise}) => {
-    const countresData=use(countresPromise);
-    const AllCountres=countresData.countries;
-    console.log(AllCountres)
+const Countrys = ({ countresPromise }) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const countresData = use(countresPromise);
+    const AllCountres = countresData.countries;
+    console.log(AllCountres);
+
     return (
         <div>
-            <h2>World On The Go :{AllCountres.length}</h2>
-            {
-                AllCountres.map(countre=><Countre countre={countre}
-                key={countre.cca3.cca3}></Countre> )
-            }
+            <h2>World On The Go : {AllCountres.length}</h2>
+            <div className="countrys-grid">
+                {
+                    AllCountres.map(countre => (
+                        <Countre 
+                            countre={countre}
+                            key={countre.cca3.cca3}
+                        />
+                    ))
+                }
+            </div>
         </div>
     );
 };
 
-export default countrys;
+export default Countrys;
