@@ -2,3 +2,9 @@
   max-width: 1280px;
   margin: 0 auto;
 }
+.card{
+  border: 2px solid green;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top:10px ;
+}
