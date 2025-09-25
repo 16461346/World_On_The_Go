@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Countrys.css'
 
-const countre = ({countre,handelVisitedCountrys}) => {
+const countre = ({countre,handelVisitedCountrys,handelVisitedFlag}) => {
      
      const currencyCode = Object.keys(countre.currencies.currencies)[0]; 
      // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -36,6 +36,7 @@ const countre = ({countre,handelVisitedCountrys}) => {
                     Visited ? "Visited" : "Not Visited"
                 }
               </button>
+              <button onClick={()=>{handelVisitedFlag(countre.flags.flags.png)}}>Add Flag</button>
         </div>
     );
 };
